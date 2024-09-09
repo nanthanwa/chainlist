@@ -159,9 +159,13 @@ const privacyStatement = {
     "We, Envelop, do not collect and/or process any personal data other than publicly available data.  Check out our privacy statement here: https://docs.envelop.is/legal/privacy-policy",
   "4everland":
     "At 4EVERLAND, we are committed to protecting the privacy and security of your personal information. While we do collect certain data from our users, such as names, email addresses, account credentials, and usage information, we take robust measures to safeguard this data. We retain your personal information only for as long as your account remains active, plus an additional 6 months after closure: https://www.4everland.org/privacy-policy.",
-  porters: "The Company does not store, process, or share personal data except your IPv4 or IPv6 address, the signatures the User performs using an EVM-compatible key pair (hereinafter referred to as “Key”). The Company also stores the User’s public Key. The user may request the deletion of such data and the closure of the User’s account via email to info@porters.xyz. The User understands that through your use of the Services and the Platform, They consent to the collection and use of this information in accordance with the Terms. https://porters.xyz/tos",
-  conduit: "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
-  nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html"
+  porters:
+    "The Company does not store, process, or share personal data except your IPv4 or IPv6 address, the signatures the User performs using an EVM-compatible key pair (hereinafter referred to as “Key”). The Company also stores the User’s public Key. The user may request the deletion of such data and the closure of the User’s account via email to info@porters.xyz. The User understands that through your use of the Services and the Platform, They consent to the collection and use of this information in accordance with the Terms. https://porters.xyz/tos",
+  conduit:
+    "We retain Personal Data about you for as long as necessary to provide you with our services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation.https://www.conduit.xyz/privacy-policy",
+  nal: "Sometimes we collect your information automatically when you interact with our services, and sometimes we collect your information directly from individuals. At times, we may collect information about an individual from other sources and third parties, even before our first direct interaction.https://www.nal.network/privacy.html",
+  originstake:
+    "At OriginStake, your privacy is our top priority. Our RPC services strictly handle on-chain information and never collect or store personal data such as IP addresses, wallet details, location, or any other identifying information. We do not track or log user interactions beyond what’s required for on-chain transactions. Any data temporarily collected is solely for maintaining service functionality, such as load balancing or DDoS protection, and is automatically deleted after 7 days. For more details: https://originstake.com/privacy"
 };
 
 export const extraRpcs = {
@@ -432,6 +436,11 @@ export const extraRpcs = {
         url: "https://rpc.public.curie.radiumblock.co/ws/ethereum",
         tracking: "none",
         trackingDetails: privacyStatement.radiumblock,
+      },
+      {
+        url: "wss://ws-rpc.graffiti.farm",
+        tracking: "limited",
+        trackingDetails: privacyStatement.graffiti,
       },
     ],
   },
@@ -1451,7 +1460,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://klaytn.blockpi.network/v1/rpc/public",
+        url: "https://kaia.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
@@ -2628,8 +2637,6 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
-      "https://rpc.pollum.services",
-      "wss://rpc.pollum.services/wss",
     ],
   },
   8: {
@@ -3109,7 +3116,7 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.ankr,
       },
       {
-        url: "https://klaytn-baobab.blockpi.network/v1/rpc/public",
+        url: "https://kaia-kairos.blockpi.network/v1/rpc/public",
         tracking: "limited",
         trackingDetails: privacyStatement.blockpi,
       },
@@ -3601,6 +3608,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://mantle.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   5197: {
@@ -3612,6 +3624,9 @@ export const extraRpcs = {
   },
   5729: {
     rpcs: ["https://rpc-testnet.hika.network"],
+  },
+  5858: {
+    rpcs: ["https://rpc.cthscan.com"],
   },
   5869: {
     rpcs: ["https://proxy.wegochain.io"],
@@ -3798,7 +3813,7 @@ export const extraRpcs = {
   },
   32520: {
     rpcs: [
-      "https://rpc.icecreamswap.com",
+      "https://rpc-bitgert.icecreamswap.com",
       "https://nodes.vefinetwork.org/bitgert",
       "https://flux-rpc.brisescan.com",
       "https://flux-rpc1.brisescan.com",
@@ -4475,9 +4490,6 @@ export const extraRpcs = {
       },
     ],
   },
-  88888: {
-    rpcs: ["https://rpc.chiliz.com"],
-  },
   88882: {
     rpcs: ["https://spicy-rpc.chiliz.com"],
   },
@@ -4942,8 +4954,6 @@ export const extraRpcs = {
       "https://rpc.rollux.com",
       "https://rollux.rpc.syscoin.org",
       "wss://rollux.rpc.syscoin.org/wss",
-      "https://rollux.pollum.services",
-      "wss://rollux.pollum.services/wss",
     ],
   },
   5700: {
@@ -4955,30 +4965,6 @@ export const extraRpcs = {
       },
       {
         url: "wss://syscoin-tanenbaum-evm.publicnode.com",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "wss://rpc-testnet.pollum.services/wss",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "https://rpc-testnet.pollum.services",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-    ],
-  },
-  57000: {
-    rpcs: [
-      {
-        url: "https://rollux.rpc-testnet.pollum.services",
-        tracking: "none",
-        trackingDetails: privacyStatement.publicnode,
-      },
-      {
-        url: "wss://rollux.rpc-testnet.pollum.services/wss",
         tracking: "none",
         trackingDetails: privacyStatement.publicnode,
       },
@@ -5128,6 +5114,16 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.onerpc,
       },
+      {
+        url: "https://kroma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://kroma.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
     ],
   },
   34443: {
@@ -5155,7 +5151,7 @@ export const extraRpcs = {
   1100: {
     rpcs: [
       "https://jsonrpc.dymension.nodestake.org",
-      "https://evm-archive.dymd.bitszn.com",
+
       "https://dymension.liquify.com/json-rpc",
       "https://dymension-evm.kynraze.com",
       "https://dymension.drpc.org",
@@ -5253,7 +5249,19 @@ export const extraRpcs = {
     rpcs: ["https://rpc.ankr.com/neura_testnet"],
   },
   60808: {
-    rpcs: ["https://rpc.gobob.xyz", "wss://rpc.gobob.xyz"],
+    rpcs: [
+      "https://rpc.gobob.xyz", "wss://rpc.gobob.xyz",
+      {
+        url: "https://bob.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+      {
+        url: "wss://bob.drpc.org",
+        tracking: "none",
+        trackingDetails: privacyStatement.drpc,
+      },
+    ],
   },
   42: {
     rpcs: [
@@ -5343,7 +5351,7 @@ export const extraRpcs = {
       {
         url: "https://rpc.nal.network",
         tracking: "yes",
-        trackingDetails: privacyStatement.nal
+        trackingDetails: privacyStatement.nal,
       },
       "wss://wss.nal.network",
     ],
@@ -5356,8 +5364,8 @@ export const extraRpcs = {
       {
         url: "https://rpc.onchainpoints.xyz",
         tracking: "yes",
-        trackingDetails: privacyStatement.conduit
-      }
+        trackingDetails: privacyStatement.conduit,
+      },
     ],
   },
   187: {
@@ -5367,12 +5375,15 @@ export const extraRpcs = {
     rpcs: ["https://rpc-test-d11k.dojima.network"],
   },
   18071918: {
-    rpcs: [
-      "https://mande-mainnet.public.blastapi.io"
-    ]
+    rpcs: ["https://mande-mainnet.public.blastapi.io"],
   },
   48900: {
     rpcs: [
+      {
+        url: "https://zircuit1-mainnet.p2pify.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.chainstack,
+      },
       {
         url: "https://zircuit-mainnet.drpc.org",
         tracking: "none",
@@ -5383,6 +5394,11 @@ export const extraRpcs = {
         tracking: "none",
         trackingDetails: privacyStatement.drpc,
       },
+      {
+        url: "https://zircuit1-mainnet.liquify.com",
+        tracking: "yes",
+        trackingDetails: privacyStatement.liquify,
+      },
     ],
   },
   56288: {
@@ -5390,12 +5406,12 @@ export const extraRpcs = {
       "https://bnb.boba.network",
       "https://replica.bnb.boba.network",
       {
-        url:"https://boba-bnb.gateway.tenderly.co",
+        url: "https://boba-bnb.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
       {
-        url:"https://gateway.tenderly.co/public/boba-bnb",
+        url: "https://gateway.tenderly.co/public/boba-bnb",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -5428,7 +5444,7 @@ export const extraRpcs = {
   },
   13371: {
     rpcs: [
-      "https://rpc.immutable.com",	
+      "https://rpc.immutable.com",
       "https://immutable-zkevm.drpc.org",
       "wss://immutable-zkevm.drpc.org",
       {
@@ -5475,10 +5491,13 @@ export const extraRpcs = {
   },
   111188: {
     rpcs: [
-      "https://real.drpc.org",
-      "wss://real.drpc.org",
       {
-        url:"https://tangible-real.gateway.tenderly.co",
+        url: "https://tangible-real.gateway.tenderly.co",
+        tracking: "yes",
+        trackingDetails: privacyStatement.tenderly,
+      },
+      {
+        url: "wss://tangible-real.gateway.tenderly.co",
         tracking: "yes",
         trackingDetails: privacyStatement.tenderly,
       },
@@ -5508,7 +5527,93 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.drpc,
       },
     ],
-  }
+  },
+  4162: {
+    rpcs: ["https://rpc.sx-rollup.gelato.digital"],
+  },
+  79479957: {
+    rpcs: ["https://rpc.sx-rollup-testnet.t.raas.gelato.cloud"],
+  },
+  388: {
+    rpcs: ["https://mainnet.zkevm.cronos.org"],
+  },
+  20230825: {
+    rpcs: [
+      "https://testnet.vcity.app",
+      {
+        url: "https://testnet.vcity.app",
+        tracking: "none",
+        trackingDetails: privacyStatement.publicnode,
+      },
+    ],
+  },
+  996: {
+    rpcs: ["https://hk.p.bifrost-rpc.liebi.com"],
+  },
+  133: {
+    rpcs: ["https://hashkeychain-testnet.alt.technology"],
+  },
+  1946: {
+    rpcs: ["https://rpc.minato.soneium.org/"],
+  },
+  41455: {
+    rpcs: [
+      "https://rpc.alephzero.raas.gelato.cloud",
+      "wss://ws.alephzero.raas.gelato.cloud",
+      {
+      url: "https://alephzero.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://alephzero.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1111: {
+    rpcs: [
+      "https://api.wemix.com",
+      "wss://ws.wemix.com",
+      {
+      url: "https://wemix.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://wemix.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
+  1513: {
+    rpcs: [
+      "https://testnet.storyrpc.io",
+      "https://story-rpc-evm.validatorvn.com",
+      {
+        url: "https://story-rpc01.originstake.com",
+        tracking: "none",
+        trackingDetails: privacyStatement.originstake,
+      }
+    ]
+  },
+  1750: {
+    rpcs: [
+      "https://rpc.metall2.com",
+      {
+      url: "https://metall2.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+      {
+      url: "wss://metall2.drpc.org",
+      tracking: "none",
+      trackingDetails: privacyStatement.drpc,
+      },
+    ],
+  },
 };
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
 
